@@ -599,7 +599,7 @@ def review_add(request, id):
                     annot.status = "r"
                     annot.save()
 
-                    annotator = CustomUser.objects.get(email=annotator_email)
+                    annotator = annot.author
                     subject = "Annotation Refused"
                     message = f"Hello {annot.author.email},\n\nAn annotation ({annot.accession}) has been refused. Get back to work!"
                     sender = request.user.email

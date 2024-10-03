@@ -64,8 +64,7 @@
 
     <ul>
       {% for pos in annotation.position.all %}
-      <p><a href="../../Genome/{{pos.chromosome.genome.id}}/{{pos.chromosome.accession_number}}"> {{
-          pos.chromosome.accession_number}}</a> start: {{ pos.start}} ({{pos.start_relative}}) end: {{ pos.end}}
+      <p><a href="../../Genome/{{pos.chromosome.genome.id}}/{{pos.chromosome.accession_number}}"> {{pos.chromosome.accession_number}}</a> start: {{ pos.start}} ({{pos.start_relative}}) end: {{ pos.end}}
         ({{pos.end_relative}})</p>
       {% endfor %}
     </ul>
